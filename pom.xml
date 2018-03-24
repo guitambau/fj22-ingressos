@@ -151,4 +151,11 @@
         </plugins>
     </build>
 
+	<developers>
+		<developer>
+			<name> Guilherme Perfeito </name>
+			<email> perfeito_gui@icloud.com </email>
+		</developer>
+	</developers>
+
 </project>
