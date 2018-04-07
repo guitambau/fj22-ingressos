@@ -14,7 +14,7 @@ public class ImdbClient {
 
 	private Logger logger = Logger.getLogger(ImdbClient.class);
 
-	public <T> Optional<T> request(Filme filme, Class<T> tclass) {
+	public <T> Optional<T> request(Filme filme, Class<T> tClass) {
 		RestTemplate client = new RestTemplate();
 
 		String titulo = filme.getNome().replace(" ", "+");
@@ -23,7 +23,7 @@ public class ImdbClient {
 
 		try {
 
-			return Optional.of(client.getForObject(url, tclass));
+			return Optional.of(client.getForObject(url, tClass));
 		} catch (RestClientException e) {
 			logger.error(e.getMessage(), e);
 			return Optional.empty();
